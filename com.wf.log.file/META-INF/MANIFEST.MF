@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: File Logger
+Bundle-SymbolicName: com.wf.log.file
+Bundle-Version: 1.0.0
+Bundle-Activator: com.wf.log.file.Activator
+Bundle-Vendor: WF
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: com.wf.log.external,
+ org.osgi.framework;version="1.3.0",
+ org.osgi.service.log;version="1.3.0"
+Bundle-ActivationPolicy: lazy

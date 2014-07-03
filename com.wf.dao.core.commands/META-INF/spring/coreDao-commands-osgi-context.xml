@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:encryption="http://www.jasypt.org/schema/encryption"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+						http://www.springframework.org/schema/osgi
+						http://www.springframework.org/schema/osgi/spring-osgi.xsd 
+						http://www.springframework.org/schema/context
+           				http://www.springframework.org/schema/context/spring-context-3.0.xsd
+           				http://www.jasypt.org/schema/encryption
+        				http://www.jasypt.org/schema/encryption/jasypt-spring3-encryption-1.xsd">
+
+	<osgi:reference id="coreEntityDao" interface="com.wf.dao.core.ICoreEntityDao"
+		cardinality="0..1" />
+
+	<osgi:reference id="coreEntityTypeDao" interface="com.wf.dao.core.ICoreEntityTypeDao"
+		cardinality="0..1" />
+
+	<osgi:reference id="coreKeyValueDao" interface="com.wf.dao.core.ICoreKeyValueDao"
+		cardinality="0..1" />
+
+	<bean id="coreEntityCommandsBean" class="com.wf.dao.core.commands.CoreEntityCommands">
+		<property name="dao" ref="coreEntityDao" />
+	</bean>
+
+	<bean id="coreEntityTypeCommandsBean" class="com.wf.dao.core.commands.CoreEntityTypeCommands">
+		<property name="dao" ref="coreEntityTypeDao" />
+	</bean>
+
+	<bean id="coreKeyValueCommandsBean" class="com.wf.dao.core.commands.CoreKeyValueCommands">
+		<property name="dao" ref="coreKeyValueDao" />
+	</bean>
+
+	<osgi:service id="coreEntityCommands" ref="coreEntityCommandsBean"
+		interface="org.eclipse.osgi.framework.console.CommandProvider" />
+
+	<osgi:service id="coreEntityTypeCommands" ref="coreEntityTypeCommandsBean"
+		interface="org.eclipse.osgi.framework.console.CommandProvider" />
+
+	<osgi:service id="coreKeyValueCommands" ref="coreKeyValueCommandsBean"
+		interface="org.eclipse.osgi.framework.console.CommandProvider" />
+
+</beans>

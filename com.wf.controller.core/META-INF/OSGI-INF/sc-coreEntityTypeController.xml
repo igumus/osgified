@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="coreEntityTypeController">
+   <implementation class="com.wf.controller.core.internals.CoreEntityTypeController"/>
+   <service>
+      <provide interface="com.wf.controller.core.ICoreEntityTypeController"/>
+      <provide interface="com.wf.controller.base.IController"/>
+   </service>
+   <reference bind="setDao" cardinality="0..1" interface="com.wf.dao.core.ICoreEntityTypeDao" name="dao" policy="dynamic" unbind="unsetDao"/>
+</scr:component>

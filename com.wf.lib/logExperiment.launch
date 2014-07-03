@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.pde.ui.EquinoxLauncher">
+<booleanAttribute key="append.args" value="true"/>
+<booleanAttribute key="automaticAdd" value="true"/>
+<booleanAttribute key="automaticValidate" value="false"/>
+<stringAttribute key="bootstrap" value=""/>
+<stringAttribute key="checked" value="[NONE]"/>
+<booleanAttribute key="clearConfig" value="true"/>
+<stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/logExperiment"/>
+<booleanAttribute key="default" value="true"/>
+<booleanAttribute key="default_auto_start" value="true"/>
+<intAttribute key="default_start_level" value="4"/>
+<stringAttribute key="deselected_workspace_plugins" value="com.wf.controller.base,com.wf.controller.core,com.wf.controller.student,com.wf.log,com.wf.log.command,com.wf.log.console,com.wf.log.db,com.wf.log.file,com.wf.log.test,com.wf.view.base"/>
+<booleanAttribute key="includeOptional" value="true"/>
+<booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -console"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dfelix.cm.dir=/Users/igumus/wf-config"/>
+<stringAttribute key="pde.version" value="3.3"/>
+<booleanAttribute key="show_selected_only" value="false"/>
+<stringAttribute key="target_bundles" value="ch.qos.logback.classic@default:default,ch.qos.logback.core@default:default,com.manning.sdmia.org.springframework.osgi.log4j.config@default:false,com.mysql.jdbc@default:default,com.springsource.antlr@default:default,com.springsource.edu.oswego.cs.dl.util.concurrent@default:default,com.springsource.javassist@default:default,com.springsource.javax.persistence@default:default,com.springsource.javax.transaction@default:default,com.springsource.javax.validation@default:default,com.springsource.javax.xml.stream@default:default,com.springsource.junit@default:default,com.springsource.net.sf.cglib*2.1.3@default:default,com.springsource.net.sf.cglib*2.2.0@default:default,com.springsource.org.aopalliance@default:default,com.springsource.org.apache.commons.collections@default:default,com.springsource.org.apache.commons.dbcp@default:default,com.springsource.org.apache.commons.logging@default:default,com.springsource.org.dom4j@default:default,com.springsource.org.hibernate.annotations.common@default:default,com.springsource.org.hibernate.annotations@default:false,com.springsource.org.hibernate.ejb@default:false,com.springsource.org.hibernate@default:default,com.springsource.org.jboss.util@default:default,com.springsource.org.objectweb.asm.attrs@default:default,com.springsource.org.objectweb.asm@default:default,com.springsource.slf4j.api@default:default,com.springsource.slf4j.log4j@default:false,jcl.over.slf4j@default:default,jul.to.slf4j@default:default,log4j.over.slf4j@default:default,org.apache.commons.dbcp@default:default,org.apache.commons.pool@default:default,org.apache.felix.configadmin@default:default,org.eclipse.equinox.common@2:true,org.eclipse.equinox.ds@1:true,org.eclipse.equinox.event@default:default,org.eclipse.equinox.util@default:default,org.eclipse.osgi.services@default:default,org.eclipse.osgi@-1:true,org.springframework.aop@default:default,org.springframework.asm@default:default,org.springframework.beans@default:default,org.springframework.context@default:default,org.springframework.core@default:default,org.springframework.expression@default:default,org.springframework.jdbc@default:default,org.springframework.orm@default:default,org.springframework.osgi.core@default:default,org.springframework.osgi.extender@default:default,org.springframework.osgi.io@default:default,org.springframework.osgi.log4j.osgi@default:default,org.springframework.test@default:default,org.springframework.transaction@default:default,slf4j.api@default:default"/>
+<booleanAttribute key="tracing" value="false"/>
+<booleanAttribute key="useCustomFeatures" value="false"/>
+<booleanAttribute key="useDefaultConfigArea" value="true"/>
+<stringAttribute key="workspace_bundles" value="com.wf.dao.base@default:default,com.wf.dao.core.commands@default:false,com.wf.dao.core@default:default,com.wf.dao.student.commands@default:false,com.wf.dao.student@default:default,com.wf.model.commands@default:false,com.wf.model.mysql@default:false,com.wf.model@default:default"/>
+</launchConfiguration>

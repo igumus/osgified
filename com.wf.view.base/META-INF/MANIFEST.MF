@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Base View
+Bundle-SymbolicName: com.wf.view.base
+Bundle-Version: 1.0.0
+Bundle-Activator: com.wf.view.base.internals.Activator
+Bundle-Vendor: WF
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: org.osgi.framework;version="1.3.0"
+Bundle-ActivationPolicy: lazy

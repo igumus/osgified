@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Student Controller
+Bundle-SymbolicName: com.wf.controller.student
+Bundle-Version: 1.0.0
+Bundle-Vendor: WF
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: com.wf.controller.base,
+ com.wf.controller.base.exceptions,
+ com.wf.dao.base,
+ com.wf.dao.student,
+ com.wf.model,
+ org.osgi.framework;version="1.3.0"
+Service-Component: META-INF/OSGI-INF/sc-*.xml
+Export-Package: com.wf.controller.student
+Bundle-Activator: com.wf.controller.student.internal.Activator

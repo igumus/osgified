@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Core Controller
+Bundle-SymbolicName: com.wf.controller.base
+Bundle-Version: 1.0.0
+Bundle-Vendor: WF
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: com.wf.dao.base,
+ com.wf.model
+Export-Package: com.wf.controller.base,
+ com.wf.controller.base.exceptions

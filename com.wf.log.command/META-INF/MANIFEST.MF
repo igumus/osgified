@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Command Experiments
+Bundle-SymbolicName: com.wf.log.command
+Bundle-Version: 1.0.0
+Bundle-Activator: com.wf.log.command.activator.Activator
+Bundle-Vendor: WF
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: com.wf.controller.base,
+ com.wf.controller.base.exceptions,
+ com.wf.controller.student,
+ com.wf.dao.base,
+ com.wf.dao.base.exceptions,
+ com.wf.dao.core,
+ com.wf.dao.student,
+ com.wf.model,
+ org.eclipse.osgi.framework.console;version="1.1.0",
+ org.osgi.framework;version="1.3.0",
+ org.osgi.service.cm;version="1.3.0",
+ org.osgi.service.component;version="1.1.0"
+Bundle-ActivationPolicy: lazy

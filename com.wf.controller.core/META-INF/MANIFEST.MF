@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Core Controller
+Bundle-SymbolicName: com.wf.controller.core
+Bundle-Version: 1.0.0
+Bundle-Activator: com.wf.controller.core.internals.Activator
+Bundle-Vendor: WF
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: com.wf.controller.base,
+ com.wf.dao.base,
+ com.wf.dao.core,
+ com.wf.model,
+ org.osgi.framework;version="1.3.0"
+Service-Component: META-INF/OSGI-INF/sc-*.xml
+Bundle-ActivationPolicy: lazy

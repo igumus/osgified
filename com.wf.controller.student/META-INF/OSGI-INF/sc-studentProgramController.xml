@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="studentProgramController">
+   <implementation class="com.wf.controller.student.internal.StudentProgramController"/>
+   <reference bind="setDao" cardinality="0..1" interface="com.wf.dao.student.IStudentProgramDao" name="dao" policy="dynamic" unbind="unsetDao"/>
+   <service>
+      <provide interface="com.wf.controller.student.IStudentProgramController"/>
+      <provide interface="com.wf.controller.base.IController"/>
+   </service>
+</scr:component>

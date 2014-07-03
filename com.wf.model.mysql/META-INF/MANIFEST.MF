@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Mysql Properties For Model
+Bundle-SymbolicName: com.wf.model.mysql
+Bundle-Version: 1.0.0
+Bundle-Vendor: WF
+Fragment-Host: com.wf.model;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ClassPath: .,
+ src/

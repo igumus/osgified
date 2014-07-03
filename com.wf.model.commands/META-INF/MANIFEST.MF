@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Fragment
+Bundle-SymbolicName: com.wf.model.commands
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: WF
+Fragment-Host: com.wf.model;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: org.eclipse.osgi.framework.console

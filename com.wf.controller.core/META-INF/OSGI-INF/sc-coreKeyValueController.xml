@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="coreKeyValueController">
+   <implementation class="com.wf.controller.core.internals.CoreKeyValueController"/>
+   <reference bind="setDao" cardinality="0..1" interface="com.wf.dao.core.ICoreKeyValueDao" name="dao" policy="dynamic" unbind="unsetDao"/>
+   <service>
+      <provide interface="com.wf.controller.base.IController"/>
+      <provide interface="com.wf.controller.core.ICoreKeyValueController"/>
+   </service>
+   
+</scr:component>

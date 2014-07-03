@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:encryption="http://www.jasypt.org/schema/encryption"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+						http://www.springframework.org/schema/osgi
+						http://www.springframework.org/schema/osgi/spring-osgi.xsd 
+						http://www.springframework.org/schema/context
+           				http://www.springframework.org/schema/context/spring-context-3.0.xsd
+           				http://www.jasypt.org/schema/encryption
+        				http://www.jasypt.org/schema/encryption/jasypt-spring3-encryption-1.xsd">
+
+	<osgi:reference id="studentDao" interface="com.wf.dao.student.IStudentDao"
+		cardinality="0..1" />
+
+	<bean id="studentCommandsBean" class="com.wf.dao.student.commands.StudentCommands">
+		<property name="dao" ref="studentDao" />
+	</bean>
+
+	<osgi:service id="studentCommands" ref="studentCommandsBean"
+		interface="org.eclipse.osgi.framework.console.CommandProvider" />
+
+</beans>

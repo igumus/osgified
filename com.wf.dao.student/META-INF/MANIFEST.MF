@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Student DAO
+Bundle-SymbolicName: com.wf.dao.student
+Bundle-Version: 1.0.0
+Bundle-Activator: com.wf.dao.student.internals.Activator
+Bundle-Vendor: WF
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: com.wf.dao.base,
+ com.wf.model,
+ org.hibernate;version="3.3.2.GA",
+ org.osgi.framework;version="1.3.0"
+Bundle-ActivationPolicy: lazy
+Export-Package: com.wf.dao.student

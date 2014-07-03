@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:encryption="http://www.jasypt.org/schema/encryption"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+						http://www.springframework.org/schema/osgi
+						http://www.springframework.org/schema/osgi/spring-osgi.xsd 
+						http://www.springframework.org/schema/context
+           				http://www.springframework.org/schema/context/spring-context-3.0.xsd
+           				http://www.jasypt.org/schema/encryption
+        				http://www.jasypt.org/schema/encryption/jasypt-spring3-encryption-1.xsd">
+
+	<osgi:reference id="sessionFactory" interface="org.hibernate.SessionFactory" cardinality="0..1"/>
+
+	<bean id="coreEntityDaoBean" class="com.wf.dao.core.jpa.internals.CoreEntityJPADao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<osgi:service id="coreEntityDao" ref="coreEntityDaoBean">
+		<osgi:interfaces>
+			<value>com.wf.dao.base.IDao</value>
+			<value>com.wf.dao.core.ICoreEntityDao</value>
+		</osgi:interfaces>
+	</osgi:service>
+
+	<bean id="coreEntityTypeDaoBean" class="com.wf.dao.core.jpa.internals.CoreEntityTypeJPADao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<osgi:service id="coreEntityTypeDao" ref="coreEntityTypeDaoBean">
+		<osgi:interfaces>
+			<value>com.wf.dao.base.IDao</value>
+			<value>com.wf.dao.core.ICoreEntityTypeDao</value>
+		</osgi:interfaces>
+	</osgi:service>
+
+	<bean id="coreKeyValueDaoBean" class="com.wf.dao.core.jpa.internals.CoreKeyValueJPADao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<osgi:service id="coreKeyValueDao" ref="coreKeyValueDaoBean">
+		<osgi:interfaces>
+			<value>com.wf.dao.base.IDao</value>
+			<value>com.wf.dao.core.ICoreKeyValueDao</value>
+		</osgi:interfaces>
+	</osgi:service>
+
+</beans>
